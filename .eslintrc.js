@@ -1,0 +1,57 @@
+module.exports = {
+    "plugins": [
+        "react",
+        "flowtype",
+    ],
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:flowtype/recommended",
+    ],
+
+    "parser": "babel-eslint",
+
+    "env": {
+        "node": true,
+        "browser": true,
+        "es6": true,
+    },
+
+    "rules": {
+        "comma-dangle": ["error", "always-multiline"],
+        "eqeqeq": "error",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "jsx-quotes": "error",
+        "keyword-spacing": "error",
+        "no-console": "off",
+        "no-const-assign": "error",
+        "no-mixed-spaces-and-tabs": "error",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": "error",
+        "no-shadow": "error",
+        "no-spaced-func": "error",
+        "no-trailing-spaces": "error",
+        "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+        "object-curly-spacing": ["error", "always"],
+        "react/jsx-closing-bracket-location": "error",
+        "react/jsx-curly-spacing": ["error", "always"],
+        "react/jsx-equals-spacing": ["error", "never"],
+        "react/jsx-indent": "error",
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-key": "error",
+        "react/jsx-wrap-multilines": "error",
+        "react/no-did-mount-set-state": "error",
+        "react/no-did-update-set-state": "error",
+        "react/no-multi-comp": "off",
+        "react/self-closing-comp": "error",
+        "semi": "error",
+        "space-before-blocks": ["error", "always"],
+        "space-before-function-paren": ["error", "never"],
+        "space-in-parens": "error",
+        "space-infix-ops": "error",
+        "space-unary-ops": "error",
+        "spaced-comment": "error",
+        "strict": "off",
+    },
+};
