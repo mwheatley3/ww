@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"os"
 
-	// "github.com/conversable/woodhouse/cmd/internal"
-	// "github.com/conversable/woodhouse/server/portal/api/db/migrations"
 	"github.com/spf13/cobra"
 )
 

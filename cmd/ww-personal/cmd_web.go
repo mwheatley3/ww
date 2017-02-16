@@ -1,10 +1,6 @@
 package main
 
 import (
-	// "github.com/conversable/woodhouse/server/log"
-	// "github.com/conversable/woodhouse/server/portal/api/db"
-	// "github.com/conversable/woodhouse/server/portal/api/service"
-	// "github.com/conversable/woodhouse/server/portal/web"
 	"fmt"
 	"net/http"
 

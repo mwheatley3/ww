@@ -1,0 +1,76 @@
+{
+	"ImportPath": "github.com/mwheatley3/ww",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v79",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.7-37-g6f383a9",
+			"Rev": "6f383a9b2998dd6f401704269c3e6e192f6175ad"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/clock",
+			"Rev": "600d898af40aa09a7a93ecb9265d87b0504b6f03"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/httpdown",
+			"Rev": "1fa03998d20119dfe4ef73f56a638d83048052e2"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/stats",
+			"Rev": "1b76add642e42c6ffba7211ad7b3939ce654526e"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/mousetrap",
+			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+		},
+		{
+			"ImportPath": "github.com/jackc/pgx",
+			"Comment": "v2.7.1-4-g69102e4",
+			"Rev": "69102e44634533d8b36ed579ae3cbcd6e773e643"
+		},
+		{
+			"ImportPath": "github.com/jackc/pgx/stdlib",
+			"Comment": "v2.7.1-4-g69102e4",
+			"Rev": "69102e44634533d8b36ed579ae3cbcd6e773e643"
+		},
+		{
+			"ImportPath": "github.com/jmoiron/sqlx",
+			"Comment": "sqlx-v1.1-42-g344b1e9",
+			"Rev": "344b1e96d6e410a093b7bce40287731a49e253f6"
+		},
+		{
+			"ImportPath": "github.com/jmoiron/sqlx/reflectx",
+			"Comment": "sqlx-v1.1-42-g344b1e9",
+			"Rev": "344b1e96d6e410a093b7bce40287731a49e253f6"
+		},
+		{
+			"ImportPath": "github.com/julienschmidt/httprouter",
+			"Comment": "v1.1-3-g6aacfd5",
+			"Rev": "6aacfd5ab513e34f7e64ea9627ab9670371b34e7"
+		},
+		{
+			"ImportPath": "github.com/kardianos/osext",
+			"Rev": "9b883c5eb462dd5cb1b0a7a104fe86bc6b9bd391"
+		},
+		{
+			"ImportPath": "github.com/satori/go.uuid",
+			"Rev": "e673fdd4dea8a7334adbbe7f57b7e4b00bdc5502"
+		},
+		{
+			"ImportPath": "github.com/serenize/snaker",
+			"Rev": "d88cc11617e4f179fa2c821a60908d5fabd7bdad"
+		},
+		{
+			"ImportPath": "github.com/spf13/cobra",
+			"Rev": "4c05eb1145f16d0e6bb4a3e1b6d769f4713cb41f"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "1f296710f879815ad9e6d39d947c828c3e4b4c3d"
+		}
+	]
+}
