@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -22,10 +23,15 @@ func webCmd() *cobra.Command {
 			// if err := srv.Listen(); err != nil {
 			// 	l.Fatalf("server listen error: %s", err)
 			// }
+			port := os.Getenv("PORT")
+			if port == "" {
+				port = "8081"
+			}
+			port = ":" + port
 			http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 				fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
 			})
-			http.ListenAndServe(":8080", nil)
+			http.ListenAndServe(port, nil)
 		},
 	}
 }
