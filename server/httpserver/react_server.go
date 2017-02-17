@@ -4,10 +4,9 @@ import (
 	"html/template"
 	"net/http"
 
-	"context"
-
 	"github.com/Sirupsen/logrus"
 	"github.com/julienschmidt/httprouter"
+	"github.com/shurcooL/httpgzip"
 )
 
 const (
@@ -55,15 +54,15 @@ func NewReactServer(conf ReactConfig, l *logrus.Logger) *Server {
 }
 
 func fsHandler(prefix, path string) Handler {
-	fs := http.StripPrefix(prefix, http.FileServer(http.Dir(path)))
+	fs := http.StripPrefix(prefix, httpgzip.FileServer(http.Dir(path), httpgzip.FileServerOptions{}))
 
-	return HandlerFunc(func(c context.Context, w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	return HandlerFunc(func(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		fs.ServeHTTP(w, r)
 	})
 }
 
 func indexHandler(conf ReactConfig, l *logrus.Logger) Handler {
-	return HandlerFunc(func(c context.Context, w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	return HandlerFunc(func(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		if err := indexTmpl.Execute(w, conf); err != nil {
 			l.Errorf("React template error: %s", err)
 		}

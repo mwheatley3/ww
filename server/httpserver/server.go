@@ -34,6 +34,7 @@ type Route struct {
 
 // New returns a new server from a Config
 func New(l *logrus.Logger, conf Config) *Server {
+
 	s := &Server{
 		Router: httprouter.New(),
 		Config: conf,

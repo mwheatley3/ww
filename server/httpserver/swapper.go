@@ -1,7 +1,6 @@
 package httpserver
 
 import (
-	"context"
 	"net/http"
 	"sync"
 
@@ -27,7 +26,7 @@ func (s *Swapper) Swap(h Handler) Handler {
 }
 
 // Handle satisfies the Handler interface
-func (s *Swapper) Handle(c context.Context, w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+func (s *Swapper) Handle(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	s.l.RLock()
 	h := s.Handler
 	s.l.RUnlock()
@@ -37,5 +36,5 @@ func (s *Swapper) Handle(c context.Context, w http.ResponseWriter, r *http.Reque
 		return
 	}
 
-	h.Handle(c, w, r, p)
+	h.Handle(w, r, p)
 }

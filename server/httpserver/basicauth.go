@@ -1,9 +1,9 @@
 package httpserver
 
 import (
-	"context"
-	"github.com/julienschmidt/httprouter"
 	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 // BasicAuth is a middleware that provides basic auth validation
@@ -14,9 +14,9 @@ func BasicAuth(username, password string) MiddlewareFunc {
 				return h
 			}
 
-			return HandlerFunc(func(c context.Context, w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+			return HandlerFunc(func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 				if user, pw, ok := r.BasicAuth(); ok && user == username && pw == password {
-					h.Handle(c, w, r, ps)
+					h.Handle(w, r, ps)
 					return
 				}
 
