@@ -6,7 +6,6 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/julienschmidt/httprouter"
-	"github.com/shurcooL/httpgzip"
 )
 
 const (
@@ -54,7 +53,7 @@ func NewReactServer(conf ReactConfig, l *logrus.Logger) *Server {
 }
 
 func fsHandler(prefix, path string) Handler {
-	fs := http.StripPrefix(prefix, httpgzip.FileServer(http.Dir(path), httpgzip.FileServerOptions{}))
+	fs := http.StripPrefix(prefix, http.FileServer(http.Dir(path)))
 
 	return HandlerFunc(func(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		fs.ServeHTTP(w, r)
