@@ -18,7 +18,7 @@ type session struct {
 	UserID uuid.UUID
 }
 
-var sesContextKey = "github.com/conversable/woodhouse/server/portal"
+var sesContextKey = "github.com/mwheatley3/ww/server/personal"
 
 func withSession(r *http.Request, v *session) *http.Request {
 	return r.WithContext(context.WithValue(r.Context(), &sesContextKey, v))

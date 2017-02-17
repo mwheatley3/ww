@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	cookieName = "conversable"
+	cookieName = "wheatley"
 )
 
 var reactConfig = httpserver.ReactConfig{

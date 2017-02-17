@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/conversable/woodhouse/server/errorset"
+	"github.com/mwheatley3/ww/server/errorset"
 )
 
 // Errs is the sms schema error set

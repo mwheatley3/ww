@@ -18,3 +18,6 @@ func MigrateCmd(loadConf PGLoadConf, path string, set *m.Set) *cobra.Command {
 		return set, pg.NewDb(l, pgConf), nil
 	})
 }
+
+// PGLoadConf returns configuration needed for pg commands
+type PGLoadConf func() (pg.Config, log.Config)

@@ -24,6 +24,11 @@
 			"Rev": "1b76add642e42c6ffba7211ad7b3939ce654526e"
 		},
 		{
+			"ImportPath": "github.com/gorilla/securecookie",
+			"Comment": "v1.1-2-gff35634",
+			"Rev": "ff356348f74133a59d3e93aa24b5b4551b6fe90d"
+		},
+		{
 			"ImportPath": "github.com/inconshreveable/mousetrap",
 			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
 		},
@@ -71,6 +76,14 @@
 		{
 			"ImportPath": "github.com/spf13/pflag",
 			"Rev": "1f296710f879815ad9e6d39d947c828c3e4b4c3d"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "c7e3b0ebdd409a0d024e3d71801427ab0e05fb2e"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "c7e3b0ebdd409a0d024e3d71801427ab0e05fb2e"
 		}
 	]
 }
