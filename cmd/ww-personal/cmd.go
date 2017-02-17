@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/mwheatley3/ww/cmd/internal"
+	"github.com/mwheatley3/ww/server/personal/api/db/migrations"
 	"github.com/spf13/cobra"
 )
 
@@ -20,10 +22,7 @@ func main() {
 
 	cmd.AddCommand(
 		webCmd(),
-		// createUserCmd(),
-		// createProjectCmd(),
-		// internal.PsqlCmd(pgLoadConfig),
-		// internal.MigrateCmd(pgLoadConfig, "server/portal/api/db/migrations", migrations.Migrations),
+		internal.MigrateCmd(pgLoadConfig, "server/personal/api/db/migrations", migrations.Migrations),
 	)
 
 	if err := cmd.Execute(); err != nil {

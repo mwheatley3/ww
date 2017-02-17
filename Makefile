@@ -1,4 +1,5 @@
 GO_FILES:=$(shell find . -name '*.go')
+NODE_ENV=NODE_ENV=$(if $(DEBUG),development,production)
 
 server: $(GO_FILES)
 ifdef DEBUG
@@ -12,3 +13,6 @@ server_deps:
 	rm -rf vendor
 	rm -rf Godeps
 	godep save ./...
+
+js_%:
+	$(NODE_ENV) webpack --colors --progress --config js/$*/webpack.js

@@ -1,3 +1,2 @@
 postgres__database=workingwheatleys
 web__addr=http://localhost:13010
-web__editor__dir=server/demos/datademos
