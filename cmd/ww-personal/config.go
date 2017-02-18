@@ -33,6 +33,8 @@ func loadConfig() Config {
 	var c Config
 	config.MustLoad(&c, config.FromFileWithOverride(confPath))
 
+	c.Web.ListenAddr = ":" + c.Port
+
 	// c.Web.Config.Cookie.BlockKey = c.Web.Cookie.BlockKey
 	// c.Web.Config.Cookie.HashKey = c.Web.Cookie.HashKey
 
