@@ -33,6 +33,7 @@ func loadConfig() Config {
 	var c Config
 	config.MustLoad(&c, config.FromFileWithOverride(confPath))
 
+	// needed to correctly set the port for heroku
 	c.Web.ListenAddr = ":" + c.Port
 
 	// c.Web.Config.Cookie.BlockKey = c.Web.Cookie.BlockKey
