@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/mwheatley3/ww/server/log"
 
 	"github.com/mwheatley3/ww/server/personal/api/db"
@@ -20,6 +22,8 @@ func webCmd() *cobra.Command {
 				svc = service.New(l, db)
 				srv = web.NewServer(l, svc, c.Web.Config)
 			)
+
+			fmt.Printf("%#+v\n", c)
 
 			if err := srv.Listen(); err != nil {
 				l.Fatalf("server listen error: %s", err)
