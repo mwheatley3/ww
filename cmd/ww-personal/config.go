@@ -17,7 +17,8 @@ var confPath string
 
 // Config is portal service configuration
 type Config struct {
-	Web struct {
+	Port string
+	Web  struct {
 		web.Config
 		Cookie struct {
 			BlockKey goconfig.HexBytes
