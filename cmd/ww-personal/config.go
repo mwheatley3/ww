@@ -4,6 +4,7 @@ import (
 	"github.com/mwheatley3/ww/server/config"
 	goconfig "github.com/mwheatley3/ww/server/config/config"
 	"github.com/mwheatley3/ww/server/log"
+	"github.com/mwheatley3/ww/server/personal/web"
 	"github.com/mwheatley3/ww/server/pg"
 )
 
@@ -17,7 +18,7 @@ var confPath string
 // Config is portal service configuration
 type Config struct {
 	Web struct {
-		// web.Config
+		web.Config
 		Cookie struct {
 			BlockKey goconfig.HexBytes
 			HashKey  goconfig.HexBytes

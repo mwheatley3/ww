@@ -35,7 +35,7 @@ type Config struct {
 	}
 }
 
-// NewServer returns a new portal server
+// NewServer returns a new personal server
 func NewServer(l *logrus.Logger, s api.Service, c Config) *Server {
 
 	rc := reactConfig

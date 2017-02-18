@@ -42,7 +42,6 @@ func main() {
 	pflag.Parse()
 
 	args := pflag.Args()
-	fmt.Printf("%#v\n", args)
 	if len(args) == 0 {
 		pflag.Usage()
 		os.Exit(1)
