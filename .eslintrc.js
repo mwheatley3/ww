@@ -1,13 +1,11 @@
 module.exports = {
     "plugins": [
         "react",
-        "flowtype",
     ],
 
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:flowtype/recommended",
     ],
 
     "parser": "babel-eslint",

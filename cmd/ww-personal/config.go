@@ -36,8 +36,8 @@ func loadConfig() Config {
 	// needed to correctly set the port for heroku
 	c.Web.ListenAddr = ":" + c.Port
 
-	// c.Web.Config.Cookie.BlockKey = c.Web.Cookie.BlockKey
-	// c.Web.Config.Cookie.HashKey = c.Web.Cookie.HashKey
+	c.Web.Config.Cookie.BlockKey = c.Web.Cookie.BlockKey
+	c.Web.Config.Cookie.HashKey = c.Web.Cookie.HashKey
 
 	return c
 }

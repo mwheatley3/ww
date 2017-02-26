@@ -1,0 +1,51 @@
+nav.nav {
+    background: #413E55;
+    color: #fff;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem 0 1rem;
+    align-items: center;
+
+    .no-sidebar & {
+        padding-left: 4em;
+    }
+
+    > .brand {
+        display: flex;
+        flex: 1 1;
+
+        img {
+            height: 2rem;
+            align-self: center;
+        }
+    }
+
+    > .user-icon {
+        position: relative;
+        cursor: pointer;
+
+        .menu {
+            top: 28px;
+            right: -5px;
+
+            &:after {
+                right: 10px;
+            }
+        }
+    }
+
+    > .user {
+        white-space: nowrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 0.9em;
+        margin: 0 1em;
+
+        > * {
+            align-self: center;
+            margin: 0 0.5rem;
+        }
+    }
+}

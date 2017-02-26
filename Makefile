@@ -14,5 +14,8 @@ server_deps:
 	rm -rf Godeps
 	godep save ./...
 
+js_%_watch: 
+	$(NODE_ENV) webpack --watch --colors --config js/$*/webpack.js
+
 js_%:
 	$(NODE_ENV) webpack --colors --progress --config js/$*/webpack.js

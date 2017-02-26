@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/mwheatley3/ww/server/log"
-
 	"github.com/mwheatley3/ww/server/personal/api/db"
 	"github.com/mwheatley3/ww/server/personal/api/service"
 	"github.com/mwheatley3/ww/server/personal/web"
@@ -23,20 +22,11 @@ func webCmd() *cobra.Command {
 				srv = web.NewServer(l, svc, c.Web.Config)
 			)
 
-			fmt.Printf("%#+v\n", c)
+			fmt.Printf("%#+v\n", c.Web.Config)
 
 			if err := srv.Listen(); err != nil {
 				l.Fatalf("server listen error: %s", err)
 			}
-			// port := os.Getenv("PORT")
-			// if port == "" {
-			// 	port = "8081"
-			// }
-			// port = ":" + port
-			// http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			// 	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
-			// })
-			// http.ListenAndServe(port, nil)
 		},
 	}
 }

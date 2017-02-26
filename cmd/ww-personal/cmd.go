@@ -22,6 +22,7 @@ func main() {
 
 	cmd.AddCommand(
 		webCmd(),
+		createUserCmd(),
 		internal.MigrateCmd(pgLoadConfig, "server/personal/api/db/migrations", migrations.Migrations),
 	)
 

@@ -18,7 +18,7 @@ var reactConfig = httpserver.ReactConfig{
 	ClientRoutes: []string{
 		"/",
 		"/login",
-		"/projects/*splat",
+		"/client/*splat",
 	},
 	Title:      "Working Wheatleys",
 	AssetsPath: "js/public/personal",
