@@ -59,7 +59,7 @@
 		},
 		{
 			"ImportPath": "github.com/kardianos/osext",
-			"Rev": "9b883c5eb462dd5cb1b0a7a104fe86bc6b9bd391"
+			"Rev": "c2c54e542fb797ad986b31721e1baedf214ca413"
 		},
 		{
 			"ImportPath": "github.com/satori/go.uuid",
@@ -83,6 +83,10 @@
 		},
 		{
 			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "c7e3b0ebdd409a0d024e3d71801427ab0e05fb2e"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/ssh/terminal",
 			"Rev": "c7e3b0ebdd409a0d024e3d71801427ab0e05fb2e"
 		}
 	]
